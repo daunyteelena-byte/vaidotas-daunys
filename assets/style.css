@@ -42,6 +42,7 @@ h3 { font-size: 1.4rem; }
 
 /* hero */
 .hero { padding: 120px 0 110px; text-align: center; border-bottom: 1px solid var(--line); }
+.portrait { display: block; height: 170px; width: auto; margin: 0 auto 32px; box-shadow: 0 6px 24px rgba(0,0,0,.12); }
 .eyebrow { text-transform: uppercase; letter-spacing: .22em; font-size: .78rem; color: var(--muted); margin: 0 0 18px; }
 .hero h1 { font-size: clamp(3rem, 9vw, 5.6rem); margin: 0; }
 .years { font-family: var(--serif-d); font-style: italic; font-size: 1.6rem; color: var(--accent); margin: 6px 0 28px; }
@@ -83,7 +84,8 @@ h3 { font-size: 1.4rem; }
   body { font-size: 17px; }
   .nav ul { gap: 14px; }
   .brand { display: none; }
-  .hero { padding: 80px 0 70px; }
+  .hero { padding: 48px 0 64px; }
+  .portrait { height: 120px; margin-bottom: 24px; }
   .block { padding: 64px 0; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
 }
