@@ -36,7 +36,11 @@ h3 { font-size: 1.4rem; }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
 .brand { display: flex; align-items: center; gap: 10px; font-family: var(--serif-d); font-size: 1.35rem; color: var(--ink); text-decoration: none; white-space: nowrap; }
 .brand img { height: 44px; width: auto; display: block; }
-.nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; overflow-x: auto; }
+.nav ul { display: flex; gap: 22px; list-style: none; margin: 0 0 0 auto; padding: 0; overflow-x: auto; min-width: 0; }
+.lang { display: flex; flex-shrink: 0; border: 1px solid var(--line); font-size: .78rem; letter-spacing: .08em; }
+.lang a { padding: 4px 9px; color: var(--muted); text-decoration: none; }
+.lang a[href]:hover { color: var(--ink); background: var(--paper-alt); }
+.lang a[aria-current] { background: var(--ink); color: #fff; }
 .nav a:not(.brand) { color: var(--muted); text-decoration: none; font-size: .9rem; white-space: nowrap; }
 .nav a:not(.brand):hover { color: var(--ink); }
 
@@ -105,7 +109,8 @@ h3 { font-size: 1.4rem; }
 
 @media (max-width: 640px) {
   body { font-size: 17px; }
-  .nav ul { gap: 14px; }
+  .nav ul { gap: 14px; margin-left: 0; }
+  .nav { gap: 12px; }
   .brand { display: none; }
   .hero { padding: 48px 0 64px; }
   .portrait { height: 120px; margin-bottom: 24px; }
