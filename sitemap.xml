@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://vaidotasdaunys.lt/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://vaidotasdaunys.lt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vaidotasdaunys.lt/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vaidotasdaunys.lt/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vaidotasdaunys.lt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vaidotasdaunys.lt/"/>
+  </url>
+  <url>
+    <loc>https://vaidotasdaunys.lt/en/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://vaidotasdaunys.lt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vaidotasdaunys.lt/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vaidotasdaunys.lt/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vaidotasdaunys.lt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vaidotasdaunys.lt/"/>
+  </url>
+  <url>
+    <loc>https://vaidotasdaunys.lt/de/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://vaidotasdaunys.lt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vaidotasdaunys.lt/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vaidotasdaunys.lt/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vaidotasdaunys.lt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vaidotasdaunys.lt/"/>
+  </url>
+  <url>
+    <loc>https://vaidotasdaunys.lt/fr/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="lt" href="https://vaidotasdaunys.lt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vaidotasdaunys.lt/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://vaidotasdaunys.lt/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://vaidotasdaunys.lt/fr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://vaidotasdaunys.lt/"/>
+  </url>
+</urlset>
