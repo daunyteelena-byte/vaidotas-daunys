@@ -38,6 +38,7 @@ h3 { font-size: 1.4rem; }
 .brand img { height: 44px; width: auto; display: block; }
 .nav ul { display: flex; gap: 22px; list-style: none; margin: 0 0 0 auto; padding: 0; overflow-x: auto; min-width: 0; }
 .lang { position: relative; flex-shrink: 0; }
+.menu-toggle { display: none; }
 .lang summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--line); font-size: .8rem; letter-spacing: .08em; color: var(--ink); user-select: none; }
 .lang summary::-webkit-details-marker { display: none; }
 .lang summary::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s ease; }
@@ -121,9 +122,21 @@ h3 { font-size: 1.4rem; }
 
 @media (max-width: 640px) {
   body { font-size: 17px; }
-  .nav ul { gap: 14px; margin-left: 0; }
-  .nav { gap: 12px; }
-  .brand { display: none; }
+  .nav { position: relative; gap: 12px; }
+  .brand { margin-right: auto; }
+  .nav ul { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0; margin: 0; padding: 8px 0 14px; background: var(--paper); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(0,0,0,.08); }
+  .nav.open ul { display: flex; }
+  .nav ul a:not(.brand) { display: block; padding: 12px 20px; font-size: 1.05rem; color: var(--ink); }
+  .nav ul a:not(.brand):active { background: var(--paper-alt); }
+  .menu-toggle { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; margin-right: -8px; padding: 0; background: none; border: 0; cursor: pointer; color: var(--ink); }
+  .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after { display: block; width: 22px; height: 2px; background: currentColor; transition: transform .2s ease, background .2s ease; }
+  .menu-toggle span { position: relative; }
+  .menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; left: 0; }
+  .menu-toggle span::before { top: -7px; }
+  .menu-toggle span::after { top: 7px; }
+  .nav.open .menu-toggle span { background: transparent; }
+  .nav.open .menu-toggle span::before { transform: translateY(7px) rotate(45deg); }
+  .nav.open .menu-toggle span::after { transform: translateY(-7px) rotate(-45deg); }
   .hero { padding: 48px 0 64px; }
   .portrait { height: 120px; margin-bottom: 24px; }
   .block { padding: 64px 0; }

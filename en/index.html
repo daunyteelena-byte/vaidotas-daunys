@@ -63,7 +63,7 @@
 <header class="top">
   <nav class="wrap nav">
     <a class="brand" href="#"><img src="../assets/img/vaidotas-daunys.jpg" alt="Portrait of Vaidotas Daunys" width="31" height="44">V. Daunys</a>
-    <ul>
+    <ul id="menu">
       <li><a href="#biography">Biography</a></li>
       <li><a href="#chronology">Chronology</a></li>
       <li><a href="#works">Works</a></li>
@@ -81,6 +81,7 @@
         <a href="../fr/" hreflang="fr" lang="fr">Français</a>
       </div>
     </details>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu"><span></span></button>
   </nav>
 </header>
 
@@ -240,6 +241,17 @@
   if (!d) return;
   document.addEventListener('click', function (e) { if (!d.contains(e.target)) d.open = false; });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') d.open = false; });
+})();
+</script>
+<script>
+(function () {
+  var nav = document.querySelector('.nav'), btn = document.querySelector('.menu-toggle');
+  if (!nav || !btn) return;
+  function set(open) { nav.classList.toggle('open', open); btn.setAttribute('aria-expanded', open); }
+  btn.addEventListener('click', function (e) { e.stopPropagation(); set(!nav.classList.contains('open')); });
+  document.querySelectorAll('#menu a').forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
+  document.addEventListener('click', function (e) { if (!nav.contains(e.target)) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
 })();
 </script>
 
