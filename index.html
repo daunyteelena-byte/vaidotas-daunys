@@ -22,6 +22,7 @@
       <li><a href="#chronologija">Chronologija</a></li>
       <li><a href="#kuryba">Kūryba</a></li>
       <li><a href="#leidiniai">Leidiniai</a></li>
+      <li><a href="#galerija">Galerija</a></li>
       <li><a href="#fondas">Fondas</a></li>
     </ul>
   </nav>
@@ -108,7 +109,20 @@
   </div>
 </section>
 
-<section id="fondas" class="block">
+<section id="galerija" class="block">
+  <div class="wrap">
+    <h2>Galerija</h2>
+    <div class="gallery">
+      <a href="assets/img/galerija/001.jpg"><img src="assets/img/galerija/001-m.jpg" alt="Vaidoto Daunio portretas iš arti" width="451" height="640" loading="lazy"></a>
+      <a href="assets/img/galerija/002.jpg"><img src="assets/img/galerija/002-m.jpg" alt="Vaidotas Daunys medinėje pavėsinėje" width="453" height="640" loading="lazy"></a>
+      <a href="assets/img/galerija/003.jpg"><img src="assets/img/galerija/003-m.jpg" alt="Vaidotas Daunys kalba prie mikrofono" width="456" height="640" loading="lazy"></a>
+      <a href="assets/img/galerija/004.jpg"><img src="assets/img/galerija/004-m.jpg" alt="Vaidotas Daunys kalba laikydamas knygą" width="430" height="640" loading="lazy"></a>
+    </div>
+    <p class="note">Nuotraukų autoriai ir datos tikslinami.</p>
+  </div>
+</section>
+
+<section id="fondas" class="block alt">
   <div class="wrap narrow">
     <h2>Vaidoto Daunio fondas</h2>
     <p>Informacija apie fondą, jo tikslus ir veiklą ruošiama.</p>
@@ -116,6 +130,37 @@
 </section>
 
 </main>
+
+<dialog class="lightbox" aria-label="Nuotrauka">
+  <img alt="">
+  <button class="lb-prev" aria-label="Ankstesnė">‹</button>
+  <button class="lb-next" aria-label="Kita">›</button>
+  <button class="lb-close" aria-label="Uždaryti">×</button>
+</dialog>
+<script>
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.gallery a'));
+  var box = document.querySelector('.lightbox');
+  if (!box || !box.showModal) return;
+  var img = box.querySelector('img'), i = 0;
+  function show(n) {
+    i = (n + links.length) % links.length;
+    img.src = links[i].href;
+    img.alt = links[i].querySelector('img').alt;
+  }
+  links.forEach(function (a, n) {
+    a.addEventListener('click', function (e) { e.preventDefault(); show(n); box.showModal(); });
+  });
+  box.querySelector('.lb-prev').onclick = function () { show(i - 1); };
+  box.querySelector('.lb-next').onclick = function () { show(i + 1); };
+  box.querySelector('.lb-close').onclick = function () { box.close(); };
+  box.addEventListener('click', function (e) { if (e.target === box || e.target === img) box.close(); });
+  box.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') show(i - 1);
+    if (e.key === 'ArrowRight') show(i + 1);
+  });
+})();
+</script>
 
 <footer class="foot">
   <div class="wrap narrow">
