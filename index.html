@@ -8,6 +8,8 @@
 <meta name="theme-color" content="#1f2a2e">
 <link rel="alternate" hreflang="lt" href="https://daunyteelena-byte.github.io/vaidotas-daunys/">
 <link rel="alternate" hreflang="en" href="https://daunyteelena-byte.github.io/vaidotas-daunys/en/">
+<link rel="alternate" hreflang="de" href="https://daunyteelena-byte.github.io/vaidotas-daunys/de/">
+<link rel="alternate" hreflang="fr" href="https://daunyteelena-byte.github.io/vaidotas-daunys/fr/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +30,15 @@
       <li><a href="#vaizdo-irasai">Vaizdo įrašai</a></li>
       <li><a href="#fondas">Fondas</a></li>
     </ul>
-    <div class="lang" aria-label="Kalba">
-      <a aria-current="page">LT</a>
-      <a href="en/" hreflang="en" lang="en">EN</a>
-    </div>
+    <details class="lang">
+      <summary aria-label="Kalba">LT</summary>
+      <div class="lang-menu">
+        <a aria-current="page" lang="lt">Lietuvių</a>
+        <a href="en/" hreflang="en" lang="en">English</a>
+        <a href="de/" hreflang="de" lang="de">Deutsch</a>
+        <a href="fr/" hreflang="fr" lang="fr">Français</a>
+      </div>
+    </details>
   </nav>
 </header>
 
@@ -183,6 +190,14 @@
     if (e.key === 'ArrowLeft') show(i - 1);
     if (e.key === 'ArrowRight') show(i + 1);
   });
+})();
+</script>
+<script>
+(function () {
+  var d = document.querySelector('.lang');
+  if (!d) return;
+  document.addEventListener('click', function (e) { if (!d.contains(e.target)) d.open = false; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') d.open = false; });
 })();
 </script>
 
