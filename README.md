@@ -14,4 +14,4 @@ Pirmoji versija parengta pagal viešus šaltinius (VLE, Vikipedija, „Krantų�
 - Nuotraukos (su autoriais ir datomis)
 - Kūrybos ištraukos (gavus leidimą)
 - Atminimo renginiai, premijos, publikacijos apie V. Daunį
-- Domenas ir GitHub Pages
+- ~~Domenas ir GitHub Pages~~ – veikia https://vaidotasdaunys.lt (DNS Hostinger, talpinimas GitHub Pages)
